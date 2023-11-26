@@ -1,0 +1,51 @@
+{
+    "DEFAULT": {
+        "url_base": "http://185.192.247.60:80",
+        "timeout": 600,
+        "apgs_id": 1
+    },
+    
+    "parameters": {
+        "0": {
+            "server": {
+                "device": {
+                    "device_id": 1,
+                    "device_name": "Sht20"
+                },
+                "equipment": {
+                    "equipment_id": 1,
+                    "equipment_name": "ФЭМ-1"
+                },
+                "parameter": {
+                    "parameter_id": 1,
+                    "name": "Температура",
+                    "measurement_id": 2,
+                    "measurement_name": "°С"
+                }
+            },
+            "client": {
+                "instrument_base": {
+                    "com_port": "COM4",
+                    "device_port": 1,
+                    "mode": "rtu"
+                },
+                "instrument_serial": {
+                    "baudrate": 9600,
+                    "parity": "none",
+                    "stopbits": 1,
+                    "timeout": 1
+                },
+                "registers": {
+                    "register_address": 1,
+                    "num_registers": 2,
+                    "function_code": 4
+                },
+                "other": {
+                    "close_port_after_each_call": true,
+                    "port": 1,
+                    "coeff": 0.01
+                }
+            }
+        }
+    }
+}
